@@ -8,9 +8,11 @@ pxr.get('/api/todos', function(err, response) {
             addTodos(data);
 
             document.getElementById("todoInput").addEventListener('keydown', function(e) {
+                // console.log(e);
                 if(e.key === "Enter") {
                     e.preventDefault();
                     createToDo();
+                    // console.log(e);
                 }
             })
             
@@ -52,4 +54,54 @@ function addTodos(todos) {
     })
 }
 
+// var userInput = document.getElementById('todoInput').value;
+//     var bodySent =  { name: userInput };
 
+
+
+// var request = new XMLHttpRequest();
+
+// document.addEventListener("DOMContentLoaded", function(event) {
+    
+//     request.open('GET', '/api/todos', true);
+
+//     request.onload = function() {
+//         if (this.status == 200 && this.status < 400) {
+//             //success
+//             var data = JSON.parse(this.response);
+//             addTodos(data);
+
+
+//             document.getElementById("todoInput").addEventListener('keydown', function(e) {
+//                 // console.log(e);
+//                 if(e.key === "Enter") {
+//                     e.preventDefault();
+//                     createToDo();
+//                     // console.log(e);
+//                 }
+//             })
+//         } 
+//     };
+//     request.onerror = function() {
+//         console.log('could not connect to database');
+//     };
+//     request.send();
+// });
+
+
+
+// function createToDo() {
+
+//     var userInput = document.getElementById('todoInput').value;
+//     var bodySent =  { name: userInput }
+
+//     console.log("user input-->",bodySent);
+
+
+//     console.log('fika')
+//     request.open("POST", '/api/todos', true)
+//     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+//     console.log('form data -->', bodySent);
+//     request.send(JSON.stringify(bodySent));
+     
+// }
